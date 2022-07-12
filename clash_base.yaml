@@ -5,7 +5,7 @@ mode: Rule
 log-level: info
 dns:
   enable: true
-  ipv6: false
+  ipv6: true
   listen: 0.0.0.0:1053
   enhanced-mode: fake-ip
   fake-ip-filter:
