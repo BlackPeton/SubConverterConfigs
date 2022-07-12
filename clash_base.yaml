@@ -1,11 +1,10 @@
 port: 7890
 socks-port: 7891
-allow-lan: false
 mode: Rule
 log-level: info
+external-controller: :9090
 dns:
   enable: true
-  ipv6: true
   listen: 0.0.0.0:1053
   enhanced-mode: fake-ip
   fake-ip-filter:
