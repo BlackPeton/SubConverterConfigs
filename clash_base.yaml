@@ -1,9 +1,8 @@
 port: 7890
 socks-port: 7891
-mode: Rule
+mode: rule
 log-level: info
-external-controller: '0.0.0.0:9090'
-secret: ''
+external-controller: 0.0.0.0:9090
 dns:
   enable: true
   listen: 0.0.0.0:53
