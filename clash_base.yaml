@@ -5,8 +5,8 @@ log-level: info
 external-controller: 0.0.0.0:9090
 dns:
   enable: true
-  listen: 0.0.0.0:53
-  enhanced-mode: fake-ip
+  listen: 0.0.0.0:1053
+  enhanced-mode: redir-host
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
     - '*.lan'
