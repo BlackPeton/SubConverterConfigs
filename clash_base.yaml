@@ -5,8 +5,9 @@ log-level: info
 external-controller: 0.0.0.0:9090
 dns:
   enable: true
+  ipv6: true
   listen: 0.0.0.0:1053
-  enhanced-mode: redir-host
+  enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
     - '*.lan'
@@ -80,7 +81,8 @@ dns:
   nameserver:
     - 223.5.5.5
     - 119.29.29.29
-    - 114.114.114.114
+    - 2400:3200::1
+    - 2400:da00::6666
   fallback:
     - https://1.0.0.1/dns-query
     - https://doh.pub/dns-query
