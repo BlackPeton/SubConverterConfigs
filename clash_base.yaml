@@ -85,7 +85,7 @@ dns:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
   fallback:
-    - https://cloudflare-dns.com/dns-query
+    - https://1.0.0.1/dns-query
     - https://dns.google/dns-query
   fallback-filter:
     geoip: true
