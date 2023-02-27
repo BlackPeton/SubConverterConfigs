@@ -7,6 +7,9 @@ dns:
   enable: true
   ipv6: true
   listen: 0.0.0.0:1053
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
@@ -81,11 +84,10 @@ dns:
   nameserver:
     - 223.5.5.5
     - 119.29.29.29
-    - "[2400:3200::1]:53"
-    - "[2400:da00::6666]:53"
-  fallback:
-    - https://1.0.0.1/dns-query
     - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback:
+    - https://cloudflare-dns.com/dns-query
     - https://dns.google/dns-query
   fallback-filter:
     geoip: true
