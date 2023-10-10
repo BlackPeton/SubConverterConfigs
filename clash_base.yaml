@@ -88,7 +88,8 @@ dns:
     - https://doh.pub/dns-query
   fallback:
     - https://1.0.0.1/dns-query
-    - https://doh.opendns.com/dns-query
+    - tls://8.8.4.4:853
+    - tls://101.101.101.101:853
   fallback-filter:
     geoip: true
     geoip-code: CN
