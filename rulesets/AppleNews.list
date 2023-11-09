@@ -1,12 +1,24 @@
-# Apple News
-DOMAIN,gspe1-ssl.ls.apple.com // 必要，但会导致「地图」使用「TOMTOM」版本数据
-PROCESS-NAME,News
-USER-AGENT,AppleNews*
-# USER-AGENT,News* // 「今日头条」亦使用此，故不启用
-USER-AGENT,com.apple.news*
-DOMAIN-SUFFIX,apple.news
+# NAME: AppleNews
+# AUTHOR: blackmatrix7 modified by BlackPeton
+# SOURCE REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2023-10-07 14:17:49
+# DOMAIN: 14
+# DOMAIN-SUFFIX: 1
+# PROCESS-NAME: 1
+# TOTAL: 16
+DOMAIN,apple.comscoreresearch.com
+DOMAIN,gateway.icloud.com
+DOMAIN,gsp-ssl.ls.apple.com
+DOMAIN,gspe1-ssl.ls.apple.com
+DOMAIN,gspe12-ssl.ls.apple.com
+DOMAIN,gspe12-cn-ssl.ls.apple.com
+DOMAIN,gspe19-ssl.ls.apple.com
+DOMAIN,gspe19-cn-ssl.ls.apple.com
+DOMAIN,gspe35-ssl.ls.apple.com
 DOMAIN,news-assets.apple.com
+DOMAIN,news-client-search.apple.com
 DOMAIN,news-client.apple.com
 DOMAIN,news-edge.apple.com
 DOMAIN,news-events.apple.com
-DOMAIN,apple.comscoreresearch.com
+DOMAIN-SUFFIX,apple.news
+PROCESS-NAME,News
