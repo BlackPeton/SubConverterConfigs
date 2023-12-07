@@ -12,50 +12,11 @@ dns:
     - 119.29.29.29
   enhanced-mode: redir-host
   prefer-h3: true
+  nameserver-policy:
+    "geosite: geolocation-!cn": 
+     - https://1.0.0.1/dns-query
+     - tls://8.8.4.4:853
+     - tls://94.140.14.14:853
   nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-  fallback:
-    - https://1.0.0.1/dns-query
-    - tls://8.8.4.4:853
-    - tls://94.140.14.14:853
-  fallback-filter:
-    geoip: true
-    ipcidr:
-      - 240.0.0.0/4
-    domain:
-      #NetFlix
-      - '+.netflix.com.edgesuite.net'
-      - '+.fast.com'
-      - '+.netflix.com'
-      - '+.netflix.net'
-      - '+.netflixdnstest0.com'
-      - '+.netflixdnstest1.com'
-      - '+.netflixdnstest2.com'
-      - '+.netflixdnstest3.com'
-      - '+.netflixdnstest4.com'
-      - '+.netflixdnstest5.com'
-      - '+.netflixdnstest6.com'
-      - '+.netflixdnstest7.com'
-      - '+.netflixdnstest8.com'
-      - '+.netflixdnstest9.com'
-      - '+.nflxext.com'
-      - '+.nflximg.com'
-      - '+.nflximg.net'
-      - '+.nflxso.net'
-      - '+.nflxvideo.net'
-      #Linkedin
-      - '+.linkedin.com'
-      - '+.licdn.com'
-      #proxy
-      - '+.renzhe.cloud'
-      - '+.nivod4.tv'
-      - '+.nivodz.com'
-      - '+.cloudflare.com'
-      - '+.onetrust.com'
-      - '+.plausible.io'
-      - '+.fhjasokiwq.com'
-      - '+.recaptcha.net'
-      - '+.biggggg.com'
-      - '+.newpppp.com'
-      - '+.ofalibi.com'
