@@ -14,9 +14,9 @@ dns:
   prefer-h3: true
   nameserver-policy:
     "geosite:geolocation-!cn": 
-     - https://1.0.0.1/dns-query
-     - tls://8.8.4.4:853
-     - tls://94.140.14.14:853
+      - https://1.0.0.1/dns-query
+      - tls://8.8.4.4:853
+      - tls://94.140.14.14:853
   nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
