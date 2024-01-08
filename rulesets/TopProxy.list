@@ -1,0 +1,4 @@
+# 置顶代理规则，用于覆盖ACL4SSR中的部分直连规则
+
+# Google
+DOMAIN,dl.google.com
