@@ -14,6 +14,8 @@ dns:
   enhanced-mode: redir-host
   prefer-h3: true
   nameserver-policy:
+    'geosite:apple-cn':
+      - https://dns.alidns.com/dns-query
     'geosite:geolocation-!cn': 
       - https://1.0.0.1/dns-query
       - tls://8.8.4.4:853
