@@ -1,0 +1,338 @@
+port: 7890
+socks-port: 7891
+mixed-port: 7892
+mode: rule
+log-level: info
+external-controller: 0.0.0.0:9090
+
+
+dns:
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  prefer-h3: true
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  fake-ip-filter:
+    - '*.lan'
+    - '*.linksys.com'
+    - '*.linksyssmartwifi.com'
+    # Apple
+    - 'swscan.apple.com'
+    - 'mesu.apple.com'
+    - 'swquery.apple.com'
+    - 'swdownload.apple.com'
+    - 'swcdn.apple.com'
+    - 'swdist.apple.com'
+    # Microsoft Service
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - 'xbox.*.microsoft.com'
+    - 'xbox.*.*.microsoft.com'
+    - '+.xboxlive.com'
+    #  NTP Service
+    - 'time.*.com'
+    - 'time.*.gov'
+    - 'time.*.edu.cn'
+    - 'time.*.apple.com'
+    - 'time1.*.com'
+    - 'time2.*.com'
+    - 'time3.*.com'
+    - 'time4.*.com'
+    - 'time5.*.com'
+    - 'time6.*.com'
+    - 'time7.*.com'
+    - 'ntp.*.com'
+    - 'ntp.*.com'
+    - 'ntp1.*.com'
+    - 'ntp2.*.com'
+    - 'ntp3.*.com'
+    - 'ntp4.*.com'
+    - 'ntp5.*.com'
+    - 'ntp6.*.com'
+    - 'ntp7.*.com'
+    - '*.time.edu.cn'
+    - '*.ntp.org.cn'
+    - '+.pool.ntp.org'
+    - 'time1.cloud.tencent.com'
+    # Google
+    - 'lens.l.google.com'
+    # Music Service
+    - '+.music.163.com'
+    - '+.126.net'
+    - 'musicapi.taihe.com'
+    - 'music.taihe.com'
+    - 'songsearch.kugou.com'
+    - 'trackercdn.kugou.com'
+    - '*.kuwo.cn'
+    - 'api-jooxtt.sanook.com'
+    - 'api.joox.com'
+    - 'joox.com'
+    - '+.y.qq.com'
+    - '+.music.tc.qq.com'
+    - 'aqqmusic.tc.qq.com'
+    - '+.stream.qqmusic.qq.com'
+    - '+.xiami.com'
+    - '+.music.migu.cn'
+    # Game Service
+    - '+.stun.*.*'
+    - '+.stun.*.*.*'
+    - '+.stun.*.*.*.*'
+    - '+.stun.*.*.*.*.*'
+    - '+.srv.nintendo.net'
+    - '*.n.n.srv.nintendo.net'
+    - '+.stun.playstation.net'
+    - '+.battlenet.com.cn'
+    - '+.wotgame.cn'
+    - '+.wggames.cn'
+    - '+.wowsgame.cn'
+    - '+.wargaming.net'
+    - '*.square-enix.com'
+    - '*.finalfantasyxiv.com'
+    - '*.ffxiv.com'
+    - '*.ff14.sdo.com'
+    - 'ff.dorado.sdo.com'
+    # Other
+    - 'localhost.ptlogin2.qq.com'
+    - 'localhost.sec.qq.com'
+    - 'proxy.golang.org'
+    - '+.qq.com'
+    - '+.baidu.com'
+    - '+.163.com'
+    - '+.126.net'
+    - '+.taobao.com'
+    - '+.jd.com'
+    - '+.tmall.com'
+    - '*.mcdn.bilivideo.cn'
+    - '+.nvidia.com'
+    - '+.nvidia.cn'
+    - '+.nvgs.nvidia.com'
+    - '+.nvgs.nvidia.cn'
+    - 'shark007.net'
+
+
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  force-domain:
+    - "+.v2ex.com"
+    - "+.netflix.com"
+    - "+.nflxvideo.net"
+    - "+.amazonaws.com"
+    - "+.media.dssott.com"
+  skip-domain:
+    - "+.apple.com"
+    - Mijia Cloud
+    - dlg.io.mi.com
+  sniff:
+    TLS:
+      ports:
+        - 443
+        - 8443
+    HTTP:
+      ports:
+        - 80
+        - 8080-8880
+      override-destination: true
+    QUIC:
+      ports:
+        - 443
+        - 8443
+      
+
+proxies:
+
+
+proxy-providers:
+  CNIX:
+    type: http
+    path: ./profiles/CNIX.yaml
+    url: 
+    interval: 86400
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+    exclude-filter: "到期|剩余流量|时间|官网|产品|购买|漏洞|备用|客服|禁止"
+
+
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - 🔃 自动选择
+      - DIRECT
+    use:
+      - CNIX
+
+  - name: 🔃 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    use: 
+      - CNIX
+
+  - name: 💻 微软服务
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+
+  - name: 🍎 苹果解锁
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🎥 媒体解锁
+
+  - name: 💬 AI服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - DIRECT
+    use:
+      - CNIX
+    filter: "美|US"
+
+  - name: 🎥 媒体解锁
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - DIRECT
+    use:
+      - CNIX
+    filter: "NF|奈飞|Netflix|NETFLIX|HBO|Disney|迪士尼|动画疯|動畫瘋|美|US"
+
+  - name: 🎮 游戏平台
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - DIRECT  
+    use:
+      - CNIX
+     
+  - name: 🇺🇸 阿美莉卡
+    type: select
+    proxies:
+    use:
+      - CNIX
+    filter: "美|US"
+
+  - name: 📺 哔哩哔哩
+    type: select
+    proxies:
+      - DIRECT
+    use:
+      - CNIX
+    filter: "港|HK|Hong Kong|台|新北|彰化|TW|Taiwan"
+  
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+  
+  - name: 🛑 拦截防护
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - DIRECT
+
+    
+rules:
+  # 自定义规则
+  - RULE-SET,TopDirect,DIRECT
+
+  # 拦截
+  - GEOSITE,category-ads-all,REJECT
+
+  # 国内网站
+  - GEOSITE,cn,DIRECT
+  - GEOSITE,googlefcm,DIRECT
+  - GEOSITE,google@cn,DIRECT
+
+  # AI服务
+  - GEOSITE,openai,💬 AI服务
+  - GEOSITE,bing@cn,💻 微软服务
+  - GEOSITE,bing,💬 AI服务
+
+  # 阿美莉卡
+  - GEOSITE,paypal,🇺🇸 阿美莉卡
+
+  # 苹果解锁
+  - RULE-SET,AppleUnlock,🍎 苹果解锁
+
+  # 媒体解锁
+  - GEOSITE,youtube,🎥 媒体解锁
+  - GEOSITE,netflix,🎥 媒体解锁
+  - GEOSITE,hbo,🎥 媒体解锁
+  - GEOSITE,disney,🎥 媒体解锁
+  - GEOSITE,spotify,🎥 媒体解锁
+  - GEOSITE,bahamut,🎥 媒体解锁
+  - GEOSITE,tiktok,🎥 媒体解锁
+  
+  # 游戏平台
+  - GEOSITE,steam@cn,DIRECT
+  - GEOSITE,steam,🎮 游戏平台
+  - GEOSITE,playstation,🎮 游戏平台
+  - GEOSITE,xbox,🎮 游戏平台
+  - GEOSITE,nintendo@cn,DIRECT
+  - GEOSITE,nintendo,🎮 游戏平台
+  - GEOSITE,origin,🎮 游戏平台
+
+  # Bilibili
+  - GEOSITE,bilibili,📺 哔哩哔哩
+
+  # 苹果服务
+  - GEOSITE,apple-cn,🍎 苹果服务
+
+  # 微软服务
+  - GEOSITE,github,🚀 节点选择
+  - GEOSITE,microsoft,💻 微软服务
+  
+  # 默认代理
+  - GEOSITE,telegram,🚀 节点选择
+  - GEOSITE,geolocation-!cn,🚀 节点选择
+
+  # GEOIP规则
+  - GEOIP,private,DIRECT,no-resolve
+  - GEOIP,telegram,🚀 节点选择
+  - GEOIP,CN,DIRECT
+
+  # 漏网之鱼
+  - MATCH,🐟 漏网之鱼
+
+
+rule-providers:
+  TopDirect:
+    type: http
+    path: ./rulesets/TopDirect.txt
+    url: "https://raw.githubusercontent.com/BlackPeton/SubConverterConfigs/main/rulesets/Direct.list"
+    interval: 86400
+    proxy: DIRECT
+    behavior: domain
+    format: text
+
+  AppleUnlock:
+    type: http
+    path: ./rulesets/AppleUnlock.txt 
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleTV/AppleTV.list"
+    interval: 86400
+    proxy: DIRECT
+    behavior: domain
+    format: text
