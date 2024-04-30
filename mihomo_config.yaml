@@ -197,8 +197,8 @@ rules:
   - GEOSITE,tiktok,🎥 媒体解锁
   
   # 游戏平台
-  - geosite:category-games@cn,DIRECT
-  - geosite:category-games,🎮 游戏平台
+  - GEOSITE,category-games@cn,DIRECT
+  - GEOSITE,category-games,🎮 游戏平台
 
   # Bilibili
   - GEOSITE,bilibili,📺 哔哩哔哩
