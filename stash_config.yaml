@@ -142,6 +142,13 @@ sniffer:
         - 8443
       
 
+geodata-mode: true
+geox-url:
+  geoip: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat"
+  geosite: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
+  mmdb: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb"
+
+
 proxies:
 
 
@@ -149,7 +156,7 @@ proxy-providers:
   CNIX:
     type: http
     path: ./profiles/CNIX.yaml
-    url: 
+    url:
     interval: 86400
     health-check:
       enable: true
@@ -235,12 +242,6 @@ proxy-groups:
       - CNIX
     filter: "港|HK|Hong Kong|台|新北|彰化|TW|Taiwan"
   
-  - name: 🎯 全球直连
-    type: select
-    proxies:
-      - DIRECT
-      - 🚀 节点选择
-  
   - name: 🛑 拦截防护
     type: select
     proxies:
@@ -268,14 +269,11 @@ rules:
 
   # AI服务
   - GEOSITE,openai,💬 AI服务
-  - GEOSITE,bing@cn,💻 微软服务
+  - GEOSITE,bing@cn,DIRECT
   - GEOSITE,bing,💬 AI服务
 
   # 阿美莉卡
   - GEOSITE,paypal,🇺🇸 阿美莉卡
-
-  # 苹果解锁
-  - RULE-SET,AppleUnlock,🍎 苹果解锁
 
   # 媒体解锁
   - GEOSITE,youtube,🎥 媒体解锁
@@ -287,31 +285,30 @@ rules:
   - GEOSITE,tiktok,🎥 媒体解锁
   
   # 游戏平台
-  - GEOSITE,steam@cn,DIRECT
-  - GEOSITE,steam,🎮 游戏平台
-  - GEOSITE,playstation,🎮 游戏平台
-  - GEOSITE,xbox,🎮 游戏平台
-  - GEOSITE,nintendo@cn,DIRECT
-  - GEOSITE,nintendo,🎮 游戏平台
-  - GEOSITE,origin,🎮 游戏平台
+  - geosite:category-games@cn,DIRECT
+  - geosite:category-games,🎮 游戏平台
 
   # Bilibili
   - GEOSITE,bilibili,📺 哔哩哔哩
 
   # 苹果服务
-  - GEOSITE,apple-cn,🍎 苹果服务
+  - RULE-SET,AppleUnlock,🍎 苹果解锁
+  - GEOSITE,apple-cn,DIRECT
+  - GEOSITE,apple,🍎 苹果服务
 
   # 微软服务
   - GEOSITE,github,🚀 节点选择
+  - GEOSITE,microsoft@cn,DIRECT
   - GEOSITE,microsoft,💻 微软服务
   
-  # 默认代理
+  # 代理
   - GEOSITE,telegram,🚀 节点选择
   - GEOSITE,geolocation-!cn,🚀 节点选择
 
   # GEOIP规则
   - GEOIP,private,DIRECT,no-resolve
   - GEOIP,telegram,🚀 节点选择
+  - GEOIP,netflix,🎥 媒体解锁
   - GEOIP,CN,DIRECT
 
   # 漏网之鱼
