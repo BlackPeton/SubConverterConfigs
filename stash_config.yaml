@@ -325,7 +325,7 @@ rule-providers:
     url: "https://raw.githubusercontent.com/BlackPeton/SubConverterConfigs/main/rulesets/Direct.list"
     interval: 86400
     proxy: DIRECT
-    behavior: domain
+    behavior: classical
     format: text
 
   AppleUnlock:
@@ -334,5 +334,5 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleTV/AppleTV.list"
     interval: 86400
     proxy: DIRECT
-    behavior: domain
+    behavior: classical
     format: text
