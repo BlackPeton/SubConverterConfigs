@@ -18,6 +18,7 @@ dns:
   nameserver-policy:
     geosite:cn,apple-cn,microsoft@cn:
       - https://dns.alidns.com/dns-query#h3=true
+      - https://doh.pub/dns-query
   nameserver:
     - https://1.0.0.1/dns-query
     - tls://8.8.4.4:853
