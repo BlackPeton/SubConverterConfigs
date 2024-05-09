@@ -13,6 +13,7 @@ dns:
   prefer-h3: true
   nameserver:
     - http3://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
   fake-ip-filter:
     - '*.lan'
     - '*.linksys.com'
