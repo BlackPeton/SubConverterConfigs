@@ -12,8 +12,7 @@ dns:
     - 119.29.29.29
   prefer-h3: true
   nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
+    - http3://dns.alidns.com/dns-query
   fake-ip-filter:
     - '*.lan'
     - '*.linksys.com'
