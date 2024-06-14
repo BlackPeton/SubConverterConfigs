@@ -177,7 +177,6 @@ rules:
   # 国内网站
   - GEOSITE,cn,DIRECT
   - GEOSITE,googlefcm,DIRECT
-  - GEOSITE,google@cn,DIRECT
 
   # AI服务
   - GEOSITE,openai,💬 AI服务
