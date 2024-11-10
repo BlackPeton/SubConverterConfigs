@@ -4,6 +4,8 @@
 # mascns.t-mobile.com
 # ns.sipgeo.t-mobile.com
 DOMAIN-SUFFIX,t-mobile.com
+DOMAIN-SUFFIX,ultramobile.com
+DOMAIN-SUFFIX,mintmobile.com
 
 DOMAIN,epdg.epc.mnc240.mcc310.pub.3gppnetwork.org
 DOMAIN,epdg.epc.mnc260.mcc310.pub.3gppnetwork.org
