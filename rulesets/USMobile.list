@@ -1,8 +1,4 @@
 # T-Mobile/Ultra/Mint Mobile
-# crl.t-mobile.com
-# eas3.msg.t-mobile.com
-# mascns.t-mobile.com
-# ns.sipgeo.t-mobile.com
 DOMAIN-SUFFIX,t-mobile.com
 DOMAIN-SUFFIX,ultramobile.com
 DOMAIN-SUFFIX,mintmobile.com
