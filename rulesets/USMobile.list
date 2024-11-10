@@ -1,10 +1,11 @@
 # T-Mobile/Ultra/Mint Mobile
-crl.t-mobile.com
-eas3.msg.t-mobile.com
-mascns.t-mobile.com
-ns.sipgeo.t-mobile.com
+# crl.t-mobile.com
+# eas3.msg.t-mobile.com
+# mascns.t-mobile.com
+# ns.sipgeo.t-mobile.com
+DOMAIN-SUFFIX,t-mobile.com
 
-epdg.epc.mnc240.mcc310.pub.3gppnetwork.org
-epdg.epc.mnc260.mcc310.pub.3gppnetwork.org
-ss.epdg.epc.mnc260.mcc310.pub.3gppnetwork.org
-ss.epdg.epc.geo.mnc260.mcc310.pub.3gppnetwork.org
+DOMAIN,epdg.epc.mnc240.mcc310.pub.3gppnetwork.org
+DOMAIN,epdg.epc.mnc260.mcc310.pub.3gppnetwork.org
+DOMAIN,ss.epdg.epc.mnc260.mcc310.pub.3gppnetwork.org
+DOMAIN,ss.epdg.epc.geo.mnc260.mcc310.pub.3gppnetwork.org
