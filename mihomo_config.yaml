@@ -173,7 +173,9 @@ rules:
 
   # 拦截
   - GEOSITE,category-ads-all,REJECT
-
+  
+  # Bilibili
+  - GEOSITE,bilibili,📺 哔哩哔哩
   # 国内网站
   - GEOSITE,cn,DIRECT
   - GEOSITE,googlefcm,DIRECT
@@ -199,9 +201,6 @@ rules:
   # 游戏平台
   - GEOSITE,category-games@cn,DIRECT
   - GEOSITE,category-games,🎮 游戏平台
-
-  # Bilibili
-  - GEOSITE,bilibili,📺 哔哩哔哩
 
   # 苹果服务
   - RULE-SET,AppleUnlock,🍎 苹果解锁
