@@ -17,13 +17,13 @@ dns:
   prefer-h3: true
   nameserver-policy:
     geosite:cn,apple-cn,microsoft@cn:
-      - https://dns.alidns.com/dns-query#h3=true
+      - https://dns.alidns.com/dns-query
       - https://doh.pub/dns-query
   nameserver:
     - https://1.0.0.1/dns-query
     - tls://8.8.4.4:853
   proxy-server-nameserver:
-    - https://dns.alidns.com/dns-query#h3=true
+    - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
 
 
@@ -75,7 +75,7 @@ proxy-providers:
     interval: 86400
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
+      url: https://www.gstatic.com/generate_204
       interval: 300
     exclude-filter: "到期|剩余流量|时间|官网|产品|购买|漏洞|备用|客服|禁止"
 
