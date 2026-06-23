@@ -10,10 +10,9 @@ dns:
   default-nameserver:
     - 223.5.5.5
     - 119.29.29.29
-  prefer-h3: true
   nameserver:
-    - doh3://dns.alidns.com/dns-query
-    - doh://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
   fake-ip-filter:
     - '*.lan'
     - '*.linksys.com'
