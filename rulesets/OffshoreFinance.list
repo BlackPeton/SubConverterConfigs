@@ -7,85 +7,85 @@
 # =========================================
 
 # --- 嘉信国际理财 (Charles Schwab) ---
-- DOMAIN-SUFFIX,schwab.com,DIRECT
-- DOMAIN-SUFFIX,schwabplan.com,DIRECT
-- DOMAIN-SUFFIX,charlesschwab.com,DIRECT
-- DOMAIN-SUFFIX,schwabfunds.com,DIRECT
+DOMAIN-SUFFIX,schwab.com
+DOMAIN-SUFFIX,schwabplan.com
+DOMAIN-SUFFIX,charlesschwab.com
+DOMAIN-SUFFIX,schwabfunds.com
 
 # --- 盈透证券 (Interactive Brokers) ---
-- DOMAIN-SUFFIX,interactivebrokers.com,DIRECT
-- DOMAIN-SUFFIX,interactivebrokers.com.hk,DIRECT
-- DOMAIN-SUFFIX,interactivebrokers.co.uk,DIRECT
-- DOMAIN-SUFFIX,ibkr.com,DIRECT
-- DOMAIN-SUFFIX,ibkr.com.hk,DIRECT
-- DOMAIN-SUFFIX,ibllc.com,DIRECT
+DOMAIN-SUFFIX,interactivebrokers.com
+DOMAIN-SUFFIX,interactivebrokers.com.hk
+DOMAIN-SUFFIX,interactivebrokers.co.uk
+DOMAIN-SUFFIX,ibkr.com
+DOMAIN-SUFFIX,ibkr.com.hk
+DOMAIN-SUFFIX,ibllc.com
 
 # =========================================
 # 🏛️ 香港传统实体银行
 # =========================================
 
 # --- 汇丰银行 (HSBC HK) ---
-- DOMAIN-SUFFIX,hsbc.com,DIRECT
-- DOMAIN-SUFFIX,hsbc.com.hk,DIRECT
-- DOMAIN-SUFFIX,payme.hsbc.com.hk,DIRECT
+DOMAIN-SUFFIX,hsbc.com
+DOMAIN-SUFFIX,hsbc.com.hk
+DOMAIN-SUFFIX,payme.hsbc.com.hk
 
 # --- 中银香港 (BOCHK) ---
-- DOMAIN-SUFFIX,bochk.com,DIRECT
-- DOMAIN-SUFFIX,boc.cn,DIRECT
+DOMAIN-SUFFIX,bochk.com
+DOMAIN-SUFFIX,boc.cn
 
 # --- 工银亚洲 (ICBC Asia) ---
-- DOMAIN-SUFFIX,icbcasia.com,DIRECT
+DOMAIN-SUFFIX,icbcasia.com
 
 # --- 招商永隆银行 (CMB Wing Lung Bank) ---
-- DOMAIN-SUFFIX,cmbwlb.com,DIRECT
+DOMAIN-SUFFIX,cmbwlb.com
 
 # --- 建行亚洲 (CCB Asia) ---
-- DOMAIN-SUFFIX,ccbasia.com,DIRECT
+DOMAIN-SUFFIX,ccbasia.com
 
 # --- 恒生银行 (Hang Seng Bank) ---
-- DOMAIN-SUFFIX,hangseng.com,DIRECT
+DOMAIN-SUFFIX,hangseng.com
 
 # --- 渣打银行香港 (Standard Chartered HK) ---
-- DOMAIN-SUFFIX,sc.com,DIRECT
-- DOMAIN-SUFFIX,sc.com.hk,DIRECT
-- DOMAIN-SUFFIX,standardchartered.com.hk,DIRECT
+DOMAIN-SUFFIX,sc.com
+DOMAIN-SUFFIX,sc.com.hk
+DOMAIN-SUFFIX,standardchartered.com.hk
 
 # --- 花旗香港 (Citibank HK) ---
-- DOMAIN-SUFFIX,citibank.com.hk,DIRECT
+DOMAIN-SUFFIX,citibank.com.hk
 
 # =========================================
 # 📱 香港数字/虚拟银行 (HK Virtual Banks)
 # =========================================
 
 # --- 众安银行 (ZA Bank) ---
-- DOMAIN-SUFFIX,zabank.hk,DIRECT
-- DOMAIN-SUFFIX,za.group,DIRECT
+DOMAIN-SUFFIX,zabank.hk
+DOMAIN-SUFFIX,za.group
 
 # --- Mox Bank (渣打旗下) ---
-- DOMAIN-SUFFIX,mox.com,DIRECT
+DOMAIN-SUFFIX,mox.com
 
 # --- Livi Bank 理慧银行 (中银旗下) ---
-- DOMAIN-SUFFIX,livibank.com,DIRECT
+DOMAIN-SUFFIX,livibank.com
 
 # --- WeLab Bank 汇立银行 ---
-- DOMAIN-SUFFIX,welab.bank,DIRECT
+DOMAIN-SUFFIX,welab.bank
 
 # --- Ant Bank 蚂蚁银行 (香港) ---
-- DOMAIN-SUFFIX,antbank.hk,DIRECT
+DOMAIN-SUFFIX,antbank.hk
 
 # --- Airstar Bank 天星银行 (小米旗下) ---
-- DOMAIN-SUFFIX,airstarbank.hk,DIRECT
+DOMAIN-SUFFIX,airstarbank.hk
 
 # --- Fusion Bank 富融银行 (腾讯旗下) ---
-- DOMAIN-SUFFIX,fusionbank.com,DIRECT
+DOMAIN-SUFFIX,fusionbank.com
 
 # --- PAOB 平安壹账通银行 ---
-- DOMAIN-SUFFIX,paob.com.hk,DIRECT
+DOMAIN-SUFFIX,paob.com.hk
 
 # =========================================
 # 🏛️ 其他
 # =========================================
 
 # --- Wise (原 TransferWise) ---
-- DOMAIN-SUFFIX,wise.com,DIRECT
-- DOMAIN-SUFFIX,transferwise.com,DIRECT
+DOMAIN-SUFFIX,wise.com
+DOMAIN-SUFFIX,transferwise.com
